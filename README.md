@@ -6,7 +6,7 @@
 * 打包成 jar 文件，使用 java -jar 命令启动
 
 ``java -jar demo-0.0.1-SNAPSHOT.jar --spring.config.location=application.properties``
-* application.properties自定义账号密码、端口、md文件目录，默认账号密码为 admin/password
+* application.properties自定义账号密码、端口、md文件目录，默认账号密码为 admin/password 
 
 ![image](https://github.com/user-attachments/assets/9bbb6763-488c-4fe6-9d72-5cb2a345f496)
 
