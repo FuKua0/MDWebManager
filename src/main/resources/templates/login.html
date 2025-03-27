@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            background-color: #f6f8fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            border: 1px solid #d8dee4;
+            border-radius: 6px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h1 {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .login-container input {
+            width: 90%;
+            padding: 6px 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #24292e;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            border: 1px solid #d1d5da;
+            border-radius: 3px;
+            outline: none;
+            box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+        }
+
+        .login-container input:focus {
+            border-color: #2188ff;
+            box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075), 0 0 0 0.2em rgba(3, 102, 214, 0.3);
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            color: #fff;
+            background-color: #2ea44f;
+            border: 1px solid rgba(27, 31, 35, 0.15);
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+        }
+
+        .login-container button:hover {
+            background-color: #2c974b;
+        }
+
+        .login-container p {
+            color: #d73a49;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h1>登录</h1>
+    <form method="post" action="/login">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">密码:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">登录</button>
+    </form>
+    <p th:if="${error}" th:text="${error}"></p>
+</div>
+</body>
+</html>
