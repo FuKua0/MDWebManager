@@ -1,4 +1,4 @@
-```html
+#html
 <script>console.log("XSS Test 1")</script>
 <img src="x" onerror="console.log('XSS Test 2')">
 <a href="javascript:console.log('XSS Test 3')">Click me</a>
